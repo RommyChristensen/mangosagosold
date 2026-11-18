@@ -7,7 +7,7 @@ Plain HTML, CSS and JavaScript with no build step.
 
 - `index.html`: page content (hero with poster, menu, what's inside, visit, order)
 - `styles.css`: the cartoon look (thick outlines, pop shadows, stickers, animations)
-- `script.js`: mobile menu, interactive "what's inside" cup, scroll-in animations, today's hours
+- `script.js`: mobile menu, interactive "what's inside" cup, scroll-in animations
 - `images/poster.jpg`: the shop poster
 - `images/mango-sago-cup.jpg`: close-up crop of the cup from the poster
 
@@ -20,7 +20,6 @@ Open `index.html` in a browser, or run `python3 -m http.server 8000` and visit h
 Search `index.html` for `TODO`:
 
 - Your real address (the Visit section only says "Jakarta, Indonesia")
-- Your real opening hours (the current hours are placeholders)
 
 Ordering buttons all link to https://instagram.com/butterbar.jkt.
 

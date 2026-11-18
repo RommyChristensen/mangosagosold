@@ -259,26 +259,20 @@ main, .site-footer { position: relative; z-index: 1; }
 @media (max-width: 860px) { .inside-grid { grid-template-columns: 1fr; gap: 32px; } .cartoon-cup { width: 230px; } }
 
 /* ---------- Visit ---------- */
-.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.visit-grid { display: grid; justify-items: center; }
+.visit-grid .card-cartoon { width: min(560px, 100%); text-align: center; }
 .card-cartoon {
   background: var(--white); border: 4px solid var(--ink); border-radius: var(--radius);
   padding: 32px; box-shadow: 8px 8px 0 var(--ink);
 }
 .card-cartoon:nth-child(1) { transform: rotate(-1deg); }
-.card-cartoon:nth-child(2) { transform: rotate(1deg); }
 .address { font: 600 1.4rem "Fredoka", sans-serif; }
 .ig-link {
   display: inline-block; margin-top: 6px; padding: .2em .7em; border-radius: 10px;
   background: var(--pink); color: var(--white); border: var(--outline);
   font: 700 1.2rem "Fredoka", sans-serif; text-decoration: none; box-shadow: var(--pop-sm);
 }
-.hours { width: 100%; border-collapse: collapse; }
-.hours td { padding: 8px 0; border-bottom: 2px dashed var(--cream-2); }
-.hours td:last-child { text-align: right; }
-.hours tr.today td { font-weight: 800; color: var(--mango-deep); }
-.hours tr.today td:first-child::after { content: " · today"; font-size: .8em; }
-.small { font-size: .95rem; font-weight: 700; margin-bottom: 0; }
-@media (max-width: 760px) { .visit-grid { grid-template-columns: 1fr; } .card-cartoon { padding: 24px; } }
+@media (max-width: 760px) { .card-cartoon { padding: 24px; } }
 
 /* ---------- CTA ---------- */
 .cta {

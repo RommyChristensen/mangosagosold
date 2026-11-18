@@ -46,9 +46,5 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-// Highlight today's hours
-const today = new Date().getDay();
-document.querySelector(`.hours tr[data-day="${today}"]`)?.classList.add("today");
-
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
