@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mango Sago Sold — Fresh Mango Desserts</title>
+  <meta name="description" content="Fresh mango sago, pomelo, and coconut desserts made daily.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥭</text></svg>">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo">Mango Sago <span>Sold</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact" class="btn btn-small">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Made fresh every morning</p>
+          <h1>Sunshine in a cup.</h1>
+          <p class="lead">Ripe mango, chewy sago pearls, pomelo and silky coconut cream. Our desserts are small-batch, never too sweet, and usually sold out by evening.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn">See the menu</a>
+            <a href="#visit" class="btn btn-ghost">Find us</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 240 260" class="cup">
+            <defs>
+              <linearGradient id="g-mango" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffc83d"/>
+                <stop offset="1" stop-color="#ff9f1c"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="120" cy="246" rx="78" ry="10" class="cup-shadow"/>
+            <path d="M40 70 L200 70 L178 236 Q120 250 62 236 Z" class="cup-glass"/>
+            <path d="M48 110 L192 110 L178 236 Q120 250 62 236 Z" fill="url(#g-mango)"/>
+            <g class="pearls">
+              <circle cx="80" cy="200" r="7"/><circle cx="100" cy="214" r="7"/><circle cx="124" cy="206" r="7"/>
+              <circle cx="148" cy="216" r="7"/><circle cx="164" cy="198" r="7"/><circle cx="92" cy="180" r="6"/>
+              <circle cx="136" cy="184" r="6"/><circle cx="114" cy="226" r="6"/>
+            </g>
+            <path d="M44 86 Q120 98 196 86 L192 112 Q120 124 48 112 Z" class="cream"/>
+            <rect x="70" y="52" width="34" height="34" rx="6" class="cube" transform="rotate(-12 87 69)"/>
+            <rect x="112" y="46" width="34" height="34" rx="6" class="cube" transform="rotate(10 129 63)"/>
+            <rect x="148" y="58" width="28" height="28" rx="6" class="cube" transform="rotate(-6 162 72)"/>
+            <path d="M150 10 L140 70" class="straw"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h2>The menu</h2>
+        <p class="section-lead">Every cup is made to order. Ask for less sugar, extra pearls, or dairy-free coconut cream.</p>
+
+        <div class="filters" role="tablist" aria-label="Filter menu">
+          <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="cups" role="tab" aria-selected="false">Cups</button>
+          <button class="chip" data-filter="drinks" role="tab" aria-selected="false">Drinks</button>
+          <button class="chip" data-filter="extras" role="tab" aria-selected="false">Extras</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="card" data-cat="cups">
+            <div class="card-top"><h3>Classic Mango Sago</h3><span class="price">$6.50</span></div>
+            <p>Fresh mango, sago pearls, coconut milk. The one that started it all.</p>
+            <span class="tag">Bestseller</span>
+          </article>
+          <article class="card" data-cat="cups">
+            <div class="card-top"><h3>Yang Zhi Gan Lu</h3><span class="price">$7.50</span></div>
+            <p>Mango, pomelo, sago and coconut cream. Bright, juicy, a little tart.</p>
+            <span class="tag">Fan favourite</span>
+          </article>
+          <article class="card" data-cat="cups">
+            <div class="card-top"><h3>Mango Mochi Bowl</h3><span class="price">$8.00</span></div>
+            <p>Mango cubes, chewy mochi, sago and a scoop of coconut ice cream.</p>
+          </article>
+          <article class="card" data-cat="drinks">
+            <div class="card-top"><h3>Mango Sago Smoothie</h3><span class="price">$6.00</span></div>
+            <p>Blended mango and coconut, with sago pearls at the bottom.</p>
+          </article>
+          <article class="card" data-cat="drinks">
+            <div class="card-top"><h3>Coconut Mango Tea</h3><span class="price">$5.50</span></div>
+            <p>Jasmine green tea shaken with mango purée and a coconut cream float.</p>
+          </article>
+          <article class="card" data-cat="extras">
+            <div class="card-top"><h3>Extra toppings</h3><span class="price">+$1.00</span></div>
+            <p>Pomelo, extra sago, grass jelly, mochi, or coconut jelly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div>
+          <h2>Why "Sold"?</h2>
+          <p>We make one batch a day with the ripest mangoes we can find. When it's gone, it's gone, and the sign on the door flips to <strong>SOLD</strong>.</p>
+          <p>No powders, no syrups from a jug. Just fruit, pearls cooked in-house, and coconut cream we whip every morning.</p>
+        </div>
+        <ul class="stats">
+          <li><strong>100%</strong><span>real mango</span></li>
+          <li><strong>1</strong><span>batch a day</span></li>
+          <li><strong>0</strong><span>artificial flavours</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section id="visit" class="section">
+      <div class="container visit-grid">
+        <div>
+          <h2>Come visit</h2>
+          <p class="address">123 Example Street<br>Your City, ST 00000</p>
+          <p><a href="https://maps.google.com" target="_blank" rel="noopener">Open in Maps →</a></p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr data-day="1"><td>Monday</td><td>Closed</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>12pm – 8pm</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>12pm – 8pm</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>12pm – 8pm</td></tr>
+              <tr data-day="5"><td>Friday</td><td>12pm – 10pm</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>11am – 10pm</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>11am – 6pm</td></tr>
+            </tbody>
+          </table>
+          <p class="muted small">Or until sold out.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container narrow">
+        <h2>Pre-order or say hi</h2>
+        <p class="section-lead">Party trays and large orders need 24 hours' notice.</p>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. 12 Classic cups for Saturday at 2pm" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mango Sago Sold</p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
