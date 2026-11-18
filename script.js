@@ -13,22 +13,38 @@ links.addEventListener("click", (e) => {
   }
 });
 
-// Menu filters
-const chips = document.querySelectorAll(".chip");
-const cards = document.querySelectorAll(".card");
+// "What's inside": hover or tap a layer to highlight it in the cartoon cup
+const cup = document.querySelector(".cartoon-cup");
+const items = document.querySelectorAll(".layers li");
 
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => {
-    chips.forEach((c) => {
-      c.classList.toggle("active", c === chip);
-      c.setAttribute("aria-selected", String(c === chip));
-    });
-    const f = chip.dataset.filter;
-    cards.forEach((card) => {
-      card.hidden = f !== "all" && card.dataset.cat !== f;
-    });
-  });
+function showLayer(n) {
+  cup.classList.toggle("focus", n !== null);
+  cup.querySelectorAll(".layer").forEach((el) => el.classList.toggle("on", el.dataset.layer === n));
+  items.forEach((li) => li.classList.toggle("on", li.dataset.layer === n));
+}
+items.forEach((li) => {
+  li.addEventListener("mouseenter", () => showLayer(li.dataset.layer));
+  li.addEventListener("mouseleave", () => showLayer(null));
+  li.addEventListener("click", () => showLayer(li.classList.contains("on") ? null : li.dataset.layer));
 });
+
+// Pop sections in as they scroll into view
+const revealEls = document.querySelectorAll(".feature-card, .layers li, .card-cartoon, .cta");
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("shown");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach((el, i) => {
+    el.classList.add("reveal");
+    el.style.transitionDelay = `${(i % 5) * 60}ms`;
+    io.observe(el);
+  });
+}
 
 // Highlight today's hours
 const today = new Date().getDay();
@@ -36,29 +52,3 @@ document.querySelector(`.hours tr[data-day="${today}"]`)?.classList.add("today")
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
-
-// Contact form: validates, then opens the visitor's email app.
-// To receive messages without email, swap this for a form service (e.g. Formspree).
-const SHOP_EMAIL = "hello@example.com"; // TODO: replace with your real address
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let ok = true;
-  form.querySelectorAll("input, textarea").forEach((el) => {
-    const valid = el.checkValidity() && el.value.trim() !== "";
-    el.closest(".field").classList.toggle("invalid", !valid);
-    if (!valid) ok = false;
-  });
-  if (!ok) {
-    status.textContent = "Please fill in every field with a valid email.";
-    return;
-  }
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Message from ${data.get("name")}`);
-  const body = encodeURIComponent(`${data.get("message")}\n\nReply to: ${data.get("email")}`);
-  window.location.href = `mailto:${SHOP_EMAIL}?subject=${subject}&body=${body}`;
-  status.textContent = "Thanks! Your email app should open to send the message.";
-  form.reset();
-});

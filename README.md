@@ -1,28 +1,28 @@
-# Mango Sago Sold
+# Butter Bar — Mango Sago
 
-A one-page website for a mango dessert shop. Plain HTML, CSS and JavaScript with no build step.
+A one-page, cartoon-style website for Butter Bar Jakarta's Mango Sago (29k/cup).
+Plain HTML, CSS and JavaScript with no build step.
 
 ## Files
 
-- `index.html`: page content (menu, about, hours, contact)
-- `styles.css`: styling, including mobile layout and dark mode
-- `script.js`: mobile menu, menu filters, today's-hours highlight, contact form
+- `index.html`: page content (hero with poster, menu, what's inside, visit, order)
+- `styles.css`: the cartoon look (thick outlines, pop shadows, stickers, animations)
+- `script.js`: mobile menu, interactive "what's inside" cup, scroll-in animations, today's hours
+- `images/poster.jpg`: the shop poster
+- `images/mango-sago-cup.jpg`: close-up crop of the cup from the poster
 
 ## Preview locally
 
-Open `index.html` in a browser, or run:
-
-```sh
-python3 -m http.server 8000
-```
-
-then visit http://localhost:8000.
+Open `index.html` in a browser, or run `python3 -m http.server 8000` and visit http://localhost:8000.
 
 ## Things to customise
 
-- Address, map link and hours in the **Visit** section of `index.html`
-- Menu items and prices in the **Menu** section
-- `SHOP_EMAIL` at the top of the contact-form code in `script.js`
+Search `index.html` for `TODO`:
+
+- Your real address (the Visit section only says "Jakarta, Indonesia")
+- Your real opening hours (the current hours are placeholders)
+
+Ordering buttons all link to https://instagram.com/butterbar.jkt.
 
 ## Publish free with GitHub Pages
 

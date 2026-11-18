@@ -3,26 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mango Sago Sold — Fresh Mango Desserts</title>
-  <meta name="description" content="Fresh mango sago, pomelo, and coconut desserts made daily.">
+  <title>Butter Bar — Mango Sago, 29k/cup</title>
+  <meta name="description" content="Butter Bar Jakarta: layered mango sago with fresh mango, mango cream and chewy sago pearls. 29k per cup.">
+  <meta property="og:title" content="Butter Bar — Mango Sago, 29k/cup">
+  <meta property="og:image" content="images/poster.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥭</text></svg>">
 </head>
 <body>
+  <!-- Floating cartoon mango cubes and sago pearls (decoration) -->
+  <div class="floaties" aria-hidden="true">
+    <span class="cube f1"></span><span class="pearl f2"></span><span class="cube f3"></span>
+    <span class="pearl f4"></span><span class="cube f5"></span><span class="pearl f6"></span>
+  </div>
+
   <header class="site-header">
     <div class="container nav">
-      <a href="#top" class="logo">Mango Sago <span>Sold</span></a>
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 40 40" class="logo-mango" aria-hidden="true">
+          <path d="M20 6c9 0 15 8 14 17-1 8-8 12-15 11C11 33 5 27 6 19 7 11 13 6 20 6z" fill="#FFB000" stroke="#3B2412" stroke-width="3"/>
+          <path d="M20 6c1-3 4-4 7-4-1 3-3 5-7 4z" fill="#6CC24A" stroke="#3B2412" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M13 17c1-3 3-5 6-5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        Butter Bar
+      </a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
       <nav id="nav-links" class="nav-links">
         <a href="#menu">Menu</a>
-        <a href="#about">About</a>
+        <a href="#inside">What's inside</a>
         <a href="#visit">Visit</a>
-        <a href="#contact" class="btn btn-small">Order</a>
+        <a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener" class="btn btn-small">Order now</a>
       </nav>
     </div>
   </header>
@@ -32,155 +47,165 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
-          <p class="eyebrow">Made fresh every morning</p>
-          <h1>Sunshine in a cup.</h1>
-          <p class="lead">Ripe mango, chewy sago pearls, pomelo and silky coconut cream. Our desserts are small-batch, never too sweet, and usually sold out by evening.</p>
+          <span class="badge wiggle">🥭 Fresh mango, every cup</span>
+          <h1>Mango Sago that makes you go <span class="mmm">mmm<span class="drip"></span></span></h1>
+          <p class="lead">Layers of juicy mango, silky mango cream and chewy sago pearls, piled high in one cup. One spoonful and you'll get it.</p>
           <div class="hero-actions">
-            <a href="#menu" class="btn">See the menu</a>
-            <a href="#visit" class="btn btn-ghost">Find us</a>
+            <a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener" class="btn btn-big">Order on Instagram</a>
+            <a href="#inside" class="btn btn-ghost btn-big">See what's inside</a>
           </div>
+          <p class="hero-note">Only <strong>29k</strong> per cup · Jakarta</p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 240 260" class="cup">
-            <defs>
-              <linearGradient id="g-mango" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ffc83d"/>
-                <stop offset="1" stop-color="#ff9f1c"/>
-              </linearGradient>
-            </defs>
-            <ellipse cx="120" cy="246" rx="78" ry="10" class="cup-shadow"/>
-            <path d="M40 70 L200 70 L178 236 Q120 250 62 236 Z" class="cup-glass"/>
-            <path d="M48 110 L192 110 L178 236 Q120 250 62 236 Z" fill="url(#g-mango)"/>
-            <g class="pearls">
-              <circle cx="80" cy="200" r="7"/><circle cx="100" cy="214" r="7"/><circle cx="124" cy="206" r="7"/>
-              <circle cx="148" cy="216" r="7"/><circle cx="164" cy="198" r="7"/><circle cx="92" cy="180" r="6"/>
-              <circle cx="136" cy="184" r="6"/><circle cx="114" cy="226" r="6"/>
-            </g>
-            <path d="M44 86 Q120 98 196 86 L192 112 Q120 124 48 112 Z" class="cream"/>
-            <rect x="70" y="52" width="34" height="34" rx="6" class="cube" transform="rotate(-12 87 69)"/>
-            <rect x="112" y="46" width="34" height="34" rx="6" class="cube" transform="rotate(10 129 63)"/>
-            <rect x="148" y="58" width="28" height="28" rx="6" class="cube" transform="rotate(-6 162 72)"/>
-            <path d="M150 10 L140 70" class="straw"/>
-          </svg>
-        </div>
+
+        <figure class="poster-frame">
+          <img src="images/poster.jpg" alt="Butter Bar Mango Sago poster: a layered cup of mango sago topped with fresh mango cubes, 29k per cup" width="900" height="1600">
+          <span class="sticker price-sticker">29k<small>/cup</small></span>
+          <span class="sticker yum-sticker">YUM!</span>
+        </figure>
       </div>
     </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Fresh mango ✦ Chewy sago ✦ Silky mango cream ✦ Made with love ✦ 29k/cup ✦ </span>
+        <span>Fresh mango ✦ Chewy sago ✦ Silky mango cream ✦ Made with love ✦ 29k/cup ✦ </span>
+      </div>
+    </div>
 
     <!-- Menu -->
     <section id="menu" class="section">
       <div class="container">
-        <h2>The menu</h2>
-        <p class="section-lead">Every cup is made to order. Ask for less sugar, extra pearls, or dairy-free coconut cream.</p>
-
-        <div class="filters" role="tablist" aria-label="Filter menu">
-          <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="chip" data-filter="cups" role="tab" aria-selected="false">Cups</button>
-          <button class="chip" data-filter="drinks" role="tab" aria-selected="false">Drinks</button>
-          <button class="chip" data-filter="extras" role="tab" aria-selected="false">Extras</button>
-        </div>
-
-        <div class="menu-grid">
-          <article class="card" data-cat="cups">
-            <div class="card-top"><h3>Classic Mango Sago</h3><span class="price">$6.50</span></div>
-            <p>Fresh mango, sago pearls, coconut milk. The one that started it all.</p>
-            <span class="tag">Bestseller</span>
-          </article>
-          <article class="card" data-cat="cups">
-            <div class="card-top"><h3>Yang Zhi Gan Lu</h3><span class="price">$7.50</span></div>
-            <p>Mango, pomelo, sago and coconut cream. Bright, juicy, a little tart.</p>
-            <span class="tag">Fan favourite</span>
-          </article>
-          <article class="card" data-cat="cups">
-            <div class="card-top"><h3>Mango Mochi Bowl</h3><span class="price">$8.00</span></div>
-            <p>Mango cubes, chewy mochi, sago and a scoop of coconut ice cream.</p>
-          </article>
-          <article class="card" data-cat="drinks">
-            <div class="card-top"><h3>Mango Sago Smoothie</h3><span class="price">$6.00</span></div>
-            <p>Blended mango and coconut, with sago pearls at the bottom.</p>
-          </article>
-          <article class="card" data-cat="drinks">
-            <div class="card-top"><h3>Coconut Mango Tea</h3><span class="price">$5.50</span></div>
-            <p>Jasmine green tea shaken with mango purée and a coconut cream float.</p>
-          </article>
-          <article class="card" data-cat="extras">
-            <div class="card-top"><h3>Extra toppings</h3><span class="price">+$1.00</span></div>
-            <p>Pomelo, extra sago, grass jelly, mochi, or coconut jelly.</p>
-          </article>
-        </div>
+        <h2 class="section-title">The star of the show</h2>
+        <article class="feature-card">
+          <div class="feature-photo">
+            <img src="images/mango-sago-cup.jpg" alt="Close-up of a cup of mango sago with mango cubes on top of mango cream and sago pearls" width="730" height="670" loading="lazy">
+            <span class="sticker bestseller">Bestseller!</span>
+          </div>
+          <div class="feature-body">
+            <h3>Mango Sago</h3>
+            <p class="feature-price">29k <span>/ cup</span></p>
+            <p>A whole cup of mango happiness. Sweet mango at the bottom, chewy sago pearls in the middle, a thick layer of mango cream, and a crown of fresh mango cubes on top.</p>
+            <ul class="perks">
+              <li>🥭 Real mango chunks</li>
+              <li>⚪ Chewy sago pearls</li>
+              <li>🍦 Silky mango cream</li>
+              <li>❄️ Best served cold</li>
+            </ul>
+            <a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener" class="btn">I want one!</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section section-alt">
-      <div class="container about-grid">
-        <div>
-          <h2>Why "Sold"?</h2>
-          <p>We make one batch a day with the ripest mangoes we can find. When it's gone, it's gone, and the sign on the door flips to <strong>SOLD</strong>.</p>
-          <p>No powders, no syrups from a jug. Just fruit, pearls cooked in-house, and coconut cream we whip every morning.</p>
+    <!-- What's inside -->
+    <section id="inside" class="section section-mango">
+      <div class="container inside-grid">
+        <div class="cartoon-cup-wrap" aria-hidden="true">
+          <svg viewBox="0 0 260 300" class="cartoon-cup">
+            <!-- cup body clip -->
+            <defs>
+              <clipPath id="cup-clip"><path d="M30 70 L230 70 L210 270 Q130 290 50 270 Z"/></clipPath>
+            </defs>
+            <g clip-path="url(#cup-clip)">
+              <rect class="layer" data-layer="5" x="0" y="230" width="260" height="70" fill="#FFB000"/>
+              <rect class="layer" data-layer="4" x="0" y="195" width="260" height="38" fill="#FF8A3D"/>
+              <rect class="layer" data-layer="3" x="0" y="155" width="260" height="42" fill="#FFF4E0"/>
+              <g class="layer" data-layer="3">
+                <circle cx="55" cy="176" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+                <circle cx="85" cy="170" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+                <circle cx="115" cy="182" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+                <circle cx="145" cy="168" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+                <circle cx="175" cy="180" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+                <circle cx="203" cy="170" r="7" fill="#F3D9C0" stroke="#3B2412" stroke-width="2"/>
+              </g>
+              <rect class="layer" data-layer="2" x="0" y="80" width="260" height="78" fill="#FFD66B"/>
+            </g>
+            <!-- cream top bulge -->
+            <path class="layer" data-layer="2" d="M30 80 Q60 52 95 66 Q130 44 165 64 Q200 50 230 80 Z" fill="#FFD66B" stroke="#3B2412" stroke-width="4" stroke-linejoin="round"/>
+            <!-- mango cubes -->
+            <g class="layer" data-layer="1" stroke="#3B2412" stroke-width="4" stroke-linejoin="round">
+              <rect x="58" y="34" width="40" height="40" rx="8" fill="#FFA41B" transform="rotate(-14 78 54)"/>
+              <rect x="110" y="22" width="42" height="42" rx="8" fill="#FFB000" transform="rotate(8 131 43)"/>
+              <rect x="160" y="40" width="36" height="36" rx="8" fill="#FFA41B" transform="rotate(-6 178 58)"/>
+            </g>
+            <g fill="#fff" opacity=".8">
+              <rect x="70" y="42" width="10" height="5" rx="2.5" transform="rotate(-14 75 44)"/>
+              <rect x="122" y="30" width="10" height="5" rx="2.5" transform="rotate(8 127 32)"/>
+            </g>
+            <!-- cup outline -->
+            <path d="M30 70 L230 70 L210 270 Q130 290 50 270 Z" fill="none" stroke="#3B2412" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M48 100 L60 250" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+            <!-- face -->
+            <g class="cup-face">
+              <circle cx="105" cy="120" r="6" fill="#3B2412"/>
+              <circle cx="155" cy="120" r="6" fill="#3B2412"/>
+              <path d="M115 132 Q130 146 145 132" fill="none" stroke="#3B2412" stroke-width="4" stroke-linecap="round"/>
+              <ellipse cx="90" cy="134" rx="9" ry="5" fill="#FF6B8B" opacity=".7"/>
+              <ellipse cx="170" cy="134" rx="9" ry="5" fill="#FF6B8B" opacity=".7"/>
+            </g>
+          </svg>
         </div>
-        <ul class="stats">
-          <li><strong>100%</strong><span>real mango</span></li>
-          <li><strong>1</strong><span>batch a day</span></li>
-          <li><strong>0</strong><span>artificial flavours</span></li>
-        </ul>
+        <div>
+          <h2 class="section-title">What's inside every cup</h2>
+          <p class="section-lead">Five layers, top to bottom. Tap one to see it in the cup.</p>
+          <ol class="layers">
+            <li data-layer="1"><b>1</b><div><h3>Fresh mango cubes</h3><p>Big, juicy, golden chunks piled on top.</p></div></li>
+            <li data-layer="2"><b>2</b><div><h3>Silky mango cream</h3><p>Thick, smooth and full of mango flavour.</p></div></li>
+            <li data-layer="3"><b>3</b><div><h3>Chewy sago pearls</h3><p>Soft little pearls in creamy milk.</p></div></li>
+            <li data-layer="4"><b>4</b><div><h3>Mango chunks</h3><p>A second hit of fruit, hiding in the middle.</p></div></li>
+            <li data-layer="5"><b>5</b><div><h3>Sweet mango base</h3><p>Save the last spoonful for this bit.</p></div></li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <!-- Visit -->
     <section id="visit" class="section">
       <div class="container visit-grid">
-        <div>
-          <h2>Come visit</h2>
-          <p class="address">123 Example Street<br>Your City, ST 00000</p>
-          <p><a href="https://maps.google.com" target="_blank" rel="noopener">Open in Maps →</a></p>
+        <div class="card-cartoon">
+          <h2 class="section-title">Come say hi</h2>
+          <!-- TODO: replace with your real address -->
+          <p class="address">Butter Bar<br>Jakarta, Indonesia</p>
+          <p>Follow us and DM to order:<br>
+            <a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener" class="ig-link">@butterbar.jkt</a></p>
         </div>
-        <div>
-          <h3>Hours</h3>
+        <div class="card-cartoon">
+          <h3>Opening hours</h3>
+          <!-- TODO: replace with your real opening hours -->
           <table class="hours">
             <tbody>
-              <tr data-day="1"><td>Monday</td><td>Closed</td></tr>
-              <tr data-day="2"><td>Tuesday</td><td>12pm – 8pm</td></tr>
-              <tr data-day="3"><td>Wednesday</td><td>12pm – 8pm</td></tr>
-              <tr data-day="4"><td>Thursday</td><td>12pm – 8pm</td></tr>
-              <tr data-day="5"><td>Friday</td><td>12pm – 10pm</td></tr>
-              <tr data-day="6"><td>Saturday</td><td>11am – 10pm</td></tr>
-              <tr data-day="0"><td>Sunday</td><td>11am – 6pm</td></tr>
+              <tr data-day="1"><td>Monday</td><td>10am – 8pm</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>10am – 8pm</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>10am – 8pm</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>10am – 8pm</td></tr>
+              <tr data-day="5"><td>Friday</td><td>10am – 9pm</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>10am – 9pm</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>10am – 6pm</td></tr>
             </tbody>
           </table>
-          <p class="muted small">Or until sold out.</p>
+          <p class="small">Or until we sell out!</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-      <div class="container narrow">
-        <h2>Pre-order or say hi</h2>
-        <p class="section-lead">Party trays and large orders need 24 hours' notice.</p>
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="e.g. 12 Classic cups for Saturday at 2pm" required></textarea>
-          </div>
-          <button type="submit" class="btn">Send message</button>
-          <p class="form-status" id="form-status" role="status"></p>
-        </form>
+    <!-- Order CTA -->
+    <section id="order" class="section">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-drips" aria-hidden="true"></div>
+          <h2>Craving it yet?</h2>
+          <p>Send us a DM on Instagram to order your Mango Sago. Getting a few for friends? Just tell us how many.</p>
+          <a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener" class="btn btn-big btn-dark">DM @butterbar.jkt</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Mango Sago Sold</p>
-      <p><a href="#top">Back to top ↑</a></p>
+      <p>© <span id="year"></span> Butter Bar Jakarta 🥭</p>
+      <p><a href="https://instagram.com/butterbar.jkt" target="_blank" rel="noopener">Instagram</a> · <a href="#top">Back to top ↑</a></p>
     </div>
   </footer>
 
